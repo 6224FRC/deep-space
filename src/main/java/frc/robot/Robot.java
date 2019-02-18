@@ -33,6 +33,7 @@ public class Robot extends TimedRobot {
   public static OI m_oi;
   public static DriveTrain m_drivetrain = new DriveTrain();
   public static Intake m_intake = new Intake();
+  public static Elevator m_elevator = new Elevator();
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
