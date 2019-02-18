@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -48,5 +50,13 @@ public class OI {
    
 
   // add buttoms to driver
-  
+  public JoystickButton push = new JoystickButton(operator, RobotMap.pushbutton);
+  public JoystickButton pull = new JoystickButton(operator, RobotMap.pullbutton);
+
+
+  public OI () {
+  // align buttons to actions
+  push.whileHeld(new RunIntake(0.5)); // change speed later
+  pull.whileHeld(new RunIntake(-0.5));
+  }
 }

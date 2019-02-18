@@ -25,11 +25,16 @@ public class RobotMap {
   // public static int rangefinderModule = 1;
   public static int Leftdrive = 0; 
   public static int Rightdrive = 1;
+  public static int intake = 2;
   
 
   // buttoms for driver joysticks
   public static int moveAxis = 1; // LY (up and down)
   public static int rotateAxis = 4; // RX (left and right)
   
-  //
+  //buttons for operator joystick
+  public static int pushbutton = 4; //left bumper
+  public static int pullbutton = 5; //right bumper
+  public static int elevatoraxis = 5; //r y-axis
+  public static int liftaxis = 1; //l y-xis
 }
