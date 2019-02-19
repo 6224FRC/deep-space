@@ -49,7 +49,7 @@ public class OI {
   public Joystick operator = new Joystick(1);
    
 
-  // add buttoms to driver
+  // add buttons to operator joystick
   public JoystickButton push = new JoystickButton(operator, RobotMap.pushbutton);
   public JoystickButton pull = new JoystickButton(operator, RobotMap.pullbutton);
 

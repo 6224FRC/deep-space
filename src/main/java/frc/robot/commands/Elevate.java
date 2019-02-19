@@ -35,7 +35,7 @@ public class Elevate extends Command {
     }
 
     // speed limit
-    speed = speed/2; 
+    //speed = speed/2; 
 
     Robot.m_elevator.runmotor(speed);
   }
