@@ -8,7 +8,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.commands.*;
+//import frc.robot.commands.*;
 import edu.wpi.first.wpilibj.Spark;
 import frc.robot.RobotMap;
 
@@ -25,6 +25,7 @@ public class Elevator extends Subsystem {
   }
 
   public void runmotor(double speed){
+
     elevatormotor.set(speed);
   }
 
@@ -32,6 +33,6 @@ public class Elevator extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new Elevate());
+    //setDefaultCommand(new Elevate(RobotMap.elevator));
   }
 }

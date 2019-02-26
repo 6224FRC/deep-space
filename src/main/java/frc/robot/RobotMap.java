@@ -23,19 +23,20 @@ public class RobotMap {
   // number and the module. For example you with a rangefinder:
   // public static int rangefinderPort = 1;
   // public static int rangefinderModule = 1;
-  public static int Leftdrive = 0; // these are PWM ports
-  public static int Rightdrive = 1;
+  public static int Leftdrive = 1; // these are PWM ports
+  public static int Rightdrive = 0;
   public static int intake = 2;
   public static int elevator = 3;
   
 
-  // buttoms for driver joysticks
+  // buttons for driver joystick
   public static int moveAxis = 1; // LY (up and down)
   public static int rotateAxis = 4; // RX (left and right)
   
   //buttons for operator joystick
-  public static int pushbutton = 4; //left bumper
-  public static int pullbutton = 5; //right bumper
-  public static int elevatoraxis = 5; //r y-axis
-  public static int liftaxis = 1; //l y-xis
+  public static int pushbutton = 5; //left bumper
+  public static int pullbutton = 6; //right bumper
+  public static int elevatorup = 4; //y button
+  public static int elevatordown = 1; //A button
+  public static int liftaxis = 5; //r y-xis
 }

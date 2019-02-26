@@ -7,39 +7,29 @@
 
 package frc.robot.commands;
 
+
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
-import frc.robot.RobotMap;
 
 public class Elevate extends Command {
-  public Elevate() {
+  private double speed;
+  public Elevate(double speed) {
+    this.speed = speed;
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.m_elevator);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-
+    Robot.m_elevator.runmotor(speed);
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double speed = Robot.m_oi.operator.getRawAxis(RobotMap.elevatoraxis);
-    
-    // deadband
-    if ((speed <= 0.2 && speed >= -0.2)){
-      speed = 0;
-    }
-
-    // speed limit
-    //speed = speed/2; 
-
-    Robot.m_elevator.runmotor(speed);
+   //just keeps the same speed
   }
-
 
   // Make this return true when this Command no longer needs to run execute()
   @Override

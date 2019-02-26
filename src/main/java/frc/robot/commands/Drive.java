@@ -34,15 +34,15 @@ public class Drive extends Command {
     double rotateValue = Robot.m_oi.driver.getRawAxis(RobotMap.rotateAxis);
 
     //dead bands round up and avoid errors
-    if ((moveValue <= 0.2 && moveValue >= -0.2)){
-        moveValue = 0;
+   if ((moveValue <= 0.2 && moveValue >= -0.2)){
+      moveValue = 0;
     }
 
     if ((rotateValue <= 0.2 && moveValue >= -0.2)){
         rotateValue = 0;
     }
 
-    // setting max speed for robot so it does not go too fast
+     //setting max speed for robot so it does not go too fast
     if (moveValue > 0.9){ 
         moveValue = 0.9;
     }
@@ -55,7 +55,7 @@ public class Drive extends Command {
     rotateValue = rotateValue/2;
 
     //send Values to the drivetrain
-    Robot.m_drivetrain.drive(moveValue, rotateValue);
+    Robot.m_drivetrain.drive (moveValue, rotateValue);
   }
 
   // Make this return true when this Command no longer needs to run execute()

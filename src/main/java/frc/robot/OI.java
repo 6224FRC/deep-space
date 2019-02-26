@@ -52,11 +52,15 @@ public class OI {
   // add buttons to operator joystick
   public JoystickButton push = new JoystickButton(operator, RobotMap.pushbutton);
   public JoystickButton pull = new JoystickButton(operator, RobotMap.pullbutton);
+  public JoystickButton elevatorup = new JoystickButton(operator, RobotMap.elevatorup);
+  public JoystickButton elevatordown =new JoystickButton(operator, RobotMap.elevatordown);
 
 
   public OI () {
   // align buttons to actions
   push.whileHeld(new RunIntake(0.5)); // change speed later
-  pull.whileHeld(new RunIntake(-0.5));
+  pull.whileHeld(new RunIntake(-0.5)); //change speed later
+  elevatorup.whileHeld(new Elevate(1)); //change speed
+  elevatordown.whileHeld(new Elevate(-0.75)); //change speed later
   }
 }
