@@ -38,10 +38,6 @@ public class Drive extends Command {
       moveValue = 0;
     }
 
-    if ((rotateValue <= 0.2 && moveValue >= -0.2)){
-        rotateValue = 0;
-    }
-
      //setting max speed for robot so it does not go too fast
     if (moveValue > 0.9){ 
         moveValue = 0.9;
