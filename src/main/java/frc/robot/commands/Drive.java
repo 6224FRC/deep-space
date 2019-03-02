@@ -51,8 +51,8 @@ public class Drive extends Command {
         moveValue = -0.9 ;
     }
     // speed limit by half
-    moveValue = moveValue/1.5;
-    rotateValue = rotateValue/1.5;
+    moveValue = moveValue/1.25;
+    rotateValue = rotateValue/1.25;
 
     //send Values to the drivetrain
     Robot.m_drivetrain.drive (moveValue, rotateValue);
